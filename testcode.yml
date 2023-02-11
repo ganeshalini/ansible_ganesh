@@ -1,16 +1,10 @@
 ---
- - name: Cisco show version example
-  connection: network_cli
-  ansible_network_os: cisco.ios.ios
-  hosts: all
-  gather_facts: false
-    
-  tasks:
-    - name: run show version on the routers
-      ios_command:
-        commands: show version | incl Version
-      register: output
+- name: reboot network devices
+  hosts: routers
+  gather_facts: no
 
-    - name: print output
-      debug:
-        var: output.stdout_lines
+  tasks:
+
+    - name: use reload role
+      include_role:
+        name: "../roles/reload"
