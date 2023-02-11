@@ -1,17 +1,15 @@
 ---
-- name: Network Getting Started First Playbook
-   hosts: all
-   gather_facts: false
-  
-  vars:
-    ansible_connection: ansible.netcommon.network_cli
-    ansible_network_os: cisco.ios.ios
-  tasks:
-    - name: Get config for IOS devices
-      ios_facts:
-        gather_subset: all
+    
+- name: Cisco show version example
+  hosts: routers
+  gather_facts: false
 
-    - name: Display the config
+  tasks:
+    - name: run show version on the routers
+      ios_command:
+        commands: show version | incl Version
+      register: output
+
+    - name: print output
       debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
-        msg: "{{ hostvars[inventory_hostname]}}"
+        var: output.stdout_lines
