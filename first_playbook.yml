@@ -2,7 +2,7 @@
 
 - name: Network Getting Started First Playbook
   connection: ansible.netcommon.network_cli
-  ansible_network_os: cisco.ios.ios
+ network_os: cisco.ios.ios
   ansible_become: yes
   ansible_become_method: enable
   gather_facts: false
