@@ -2,12 +2,11 @@
     
 - name: Cisco show version example
   connection: network_cli
+ansible_connection: ansible.netcommon.network_cli
+ansible_network_os: cisco.ios.ios
   hosts: all
   gather_facts: false
-  
-  [ios:vars]
-  ansible_network_os=cisco.ios.ios
-  
+    
   tasks:
     - name: run show version on the routers
       ios_command:
