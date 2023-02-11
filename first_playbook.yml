@@ -9,7 +9,7 @@
   hosts: all
   tasks:
 
-    - name: Get config for VyOS devices
+    - name: conf
       cisco.ios.config:
          commands:
           - hostname test 
