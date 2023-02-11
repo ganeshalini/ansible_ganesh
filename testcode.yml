@@ -1,7 +1,7 @@
 ---
     
 - name: Cisco show version example
-  hosts: router
+  hosts: all
   gather_facts: false
 
   tasks:
