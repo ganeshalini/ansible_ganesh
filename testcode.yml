@@ -3,8 +3,10 @@
   connection: network_cli
   gather_facts: false
   hosts: all
+   vars:
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_network_os: cisco.ios.ios
   tasks:
-
     - name: Get config for IOS devices
       ios_facts:
         gather_subset: all
