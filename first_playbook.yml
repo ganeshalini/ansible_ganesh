@@ -7,6 +7,6 @@
   tasks:
 
     - name: conf
-      cisco.ios.config:
+       ios_command:
          commands:
-          - hostname test 
+          - sh ver 
