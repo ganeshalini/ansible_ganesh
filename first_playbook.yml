@@ -2,6 +2,7 @@
 
 - name: Network Getting Started First Playbook
   connection: ansible.netcommon.network_cli
+  network_os: cisco.ios
   gather_facts: false
   hosts: all
   tasks:
