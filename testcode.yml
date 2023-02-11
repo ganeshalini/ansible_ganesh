@@ -4,7 +4,10 @@
   connection: network_cli
   hosts: all
   gather_facts: false
-
+  
+  [ios:vars]
+  ansible_network_os=cisco.ios.ios
+  
   tasks:
     - name: run show version on the routers
       ios_command:
