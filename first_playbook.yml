@@ -10,4 +10,6 @@
   tasks:
 
     - name: Get config for VyOS devices
-      cisco.ios.
+      cisco.ios.config:
+         commands:
+          - hostname test 
