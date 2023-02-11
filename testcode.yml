@@ -1,6 +1,7 @@
 ---
     
 - name: Cisco show version example
+  connection: network_cli
   hosts: all
   gather_facts: false
 
