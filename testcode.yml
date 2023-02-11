@@ -1,9 +1,10 @@
 ---
 - name: Network Getting Started First Playbook
   connection: network_cli
-  network_os: cisco.ios.ios 
   gather_facts: false
   hosts: all
+  vars:
+    ansible_network_os: cisco.ios.ios
   tasks:
 
     - name: Get config for IOS devices
