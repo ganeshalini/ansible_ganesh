@@ -5,6 +5,6 @@
   hosts: all
   tasks: 
      - name: ensure that the desired
-        cisco.ios.config:
+        cisco.ios.config: 
          commands:
           - hostname test 
