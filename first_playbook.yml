@@ -2,7 +2,7 @@
 
 - name: Network Getting Started First Playbook
   connection: ansible.netcommon.network_cli
-  become: ye
+  become: yes
   hosts: all
   tasks:
 
