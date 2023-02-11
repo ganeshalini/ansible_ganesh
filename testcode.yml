@@ -4,6 +4,7 @@
   gather_facts: false
   hosts: all
   tasks: 
+  
      - name: ensure that the desired
        cisco.ios.config: 
          commands:
