@@ -4,9 +4,3 @@
   connection: ansible.netcommon.network_cli
   become: yes
   hosts: all
-  tasks:
-
-    - name: conf
-       ios_command:
-         commands:
-          - sh ver 
