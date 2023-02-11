@@ -1,6 +1,5 @@
 ---
-    
-- name: Cisco show version example
+ - name: Cisco show version example
   connection: network_cli
   ansible_network_os: cisco.ios.ios
   hosts: all
