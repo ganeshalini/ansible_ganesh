@@ -6,6 +6,6 @@
   tasks: 
   
      - name: ensure that the desired
-       cisco.ios.config: 
+       cisco.ios.ios_command_module: 
          commands:
           - hostname test 
