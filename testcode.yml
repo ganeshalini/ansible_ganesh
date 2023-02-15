@@ -1,10 +1,4 @@
 ---
 - name: Network Getting Started First Playbook
-  connection: network_cli
-  gather_facts: false
-  hosts: all
-  tasks:
-
-   - name: ensure that the desired
-         cisco.ios.ios_command:
-    commands: show version'   
+  ios_command:
+   commands: show run
