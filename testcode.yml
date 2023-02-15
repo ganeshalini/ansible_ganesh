@@ -4,6 +4,6 @@
   gather_facts: false
   hosts: all
   tasks:
-- name: Network Getting Started First Playbook
-  ios_command:
-   commands: show run
+    - name: Network Getting Started First Playbook
+    ios_command:
+    commands: show run
